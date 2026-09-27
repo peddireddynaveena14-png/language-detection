@@ -7,3 +7,4 @@ joblib
 requests
 python-docx
 PyPDF2
+gunicorn
