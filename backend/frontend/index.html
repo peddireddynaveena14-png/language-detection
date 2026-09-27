@@ -1,0 +1,210 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Language Detection AI</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <header class="header">
+
+        <h1>🌍 Language Detection AI</h1>
+
+        <p>
+            Detect, analyze and translate languages
+            using Natural Language Processing
+        </p>
+
+    </header>
+
+
+    <main>
+
+        <!-- TEXT DETECTION -->
+
+        <section class="card">
+
+            <h2>🔍 Language Detection</h2>
+
+            <label for="textInput">
+                Enter your text
+            </label>
+
+            <textarea
+                id="textInput"
+                placeholder="Type your sentence here..."
+            ></textarea>
+
+
+            <button onclick="detectLanguage()">
+                🔍 Detect Language
+            </button>
+
+
+            <!-- FILE UPLOAD -->
+
+            <div class="upload-section">
+
+                <h3>📎 Upload Document</h3>
+
+                <p>
+                    Upload PDF, TXT or DOCX file
+                </p>
+
+                <input
+                    type="file"
+                    id="fileInput"
+                    accept=".pdf,.txt,.docx"
+                >
+
+                <button onclick="uploadFile()">
+                    📄 Detect Language from File
+                </button>
+
+            </div>
+
+
+            <!-- TEXT RESULT -->
+
+            <div
+                id="result"
+                class="result hidden">
+
+                <h3>📊 Detection Result</h3>
+
+                <p>
+                    🌍 Detected Language:
+                    <strong id="language">-</strong>
+                </p>
+
+                <p>
+                    📈 Confidence:
+                    <strong id="confidence">-</strong>
+                </p>
+
+            </div>
+
+
+            <!-- FILE RESULT -->
+
+            <div
+                id="fileResult"
+                class="result hidden">
+
+                <h3>📄 File Detection Result</h3>
+
+                <p>
+                    📁 File:
+                    <strong id="fileName">-</strong>
+                </p>
+
+                <p>
+                    🌍 Language:
+                    <strong id="fileLanguage">-</strong>
+                </p>
+
+                <p>
+                    📈 Confidence:
+                    <strong id="fileConfidence">-</strong>
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- TRANSLATION -->
+
+        <section class="card">
+
+            <h2>🌐 Translation</h2>
+
+            <label for="targetLanguage">
+                Select Target Language
+            </label>
+
+            <select id="targetLanguage">
+
+                <option>English</option>
+                <option>Hindi</option>
+                <option>Telugu</option>
+                <option>Tamil</option>
+                <option>Kannada</option>
+                <option>Malayalam</option>
+                <option>Spanish</option>
+                <option>French</option>
+                <option>German</option>
+                <option>Portuguese</option>
+                <option>Italian</option>
+                <option>Russian</option>
+                <option>Dutch</option>
+                <option>Arabic</option>
+                <option>Turkish</option>
+                <option>Danish</option>
+                <option>Greek</option>
+                <option>Swedish</option>
+
+            </select>
+
+
+            <button onclick="translateText()">
+                🌐 Translate
+            </button>
+
+
+            <!-- TRANSLATION RESULT -->
+
+            <div
+                id="translationResult"
+                class="translation hidden">
+
+                <h3>📝 Translated Text</h3>
+
+                <textarea
+                    id="translatedText"
+                    readonly
+                    placeholder="Translation will appear here..."
+                ></textarea>
+
+
+                <button onclick="downloadTranslation()">
+                    📥 Download Translation
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            Language Detection & Translation System
+        </p>
+
+        <p>
+            NLP Project
+        </p>
+
+    </footer>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
+
